@@ -18,7 +18,6 @@ frontend\public\logo192.png
 frontend\public\logo512.png
 frontend\public\manifest.json
 frontend\public\robots.txt
-frontend\README.md
 frontend\src\
 frontend\src\App.js
 frontend\src\ButtonEdge.js
@@ -35,9 +34,9 @@ frontend\src\nodes\textNode.js
 frontend\src\PipelineTemplatePanel.js
 frontend\src\pipelineTemplates.js
 frontend\src\Properties.js
-frontend\src\sidebar.js
 frontend\src\store.js
 frontend\src\submit.js
 frontend\src\toolbar.js
 frontend\src\ui.js
 project_file_structure.txt
+README.md
