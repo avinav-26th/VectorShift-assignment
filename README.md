@@ -5,7 +5,7 @@
 VectorShift Pipeline Demo is a drag-and-drop editor that allows users to design, validate, and simulate complex AI workflows. It mimics the behavior of production-grade tools like LangFlow or ComfyUI, offering a seamless experience from "Idea" to "Execution Simulation." It features a custom-built Breadth-First Search (BFS) execution engine, real-time variable detection, and robust state management.
 
 ---
-### [See Live Frontend](https://vectorshift-pipeline-frontend.vercel.app/) | [Walkthrough Demo](https://youtu.be/placeholder-link)
+### [See Live Frontend](https://vector-shift-assignment-delta.vercel.app/) | [Walkthrough Demo](https://youtu.be/placeholder-link)
 
 ---
 
@@ -110,6 +110,15 @@ python main.py
 ---
 
 ## 📸 Screenshots
+<img width="1922" height="923" alt="vs1" src="https://github.com/user-attachments/assets/448766d9-a2ed-4f0c-acc9-9ea19f23874d" />
+<img width="1922" height="923" alt="vs2" src="https://github.com/user-attachments/assets/915bc778-3dae-4836-82e6-91f89a310e17" />
+<img width="1919" height="921" alt="vs3" src="https://github.com/user-attachments/assets/989eb1eb-29bd-45f9-952b-a6c8dd9b6e2a" />
+<img width="1919" height="922" alt="vs4" src="https://github.com/user-attachments/assets/e20c482a-da66-4505-bc91-25f5da3fca4f" />
+<img width="1922" height="2496" alt="vs5" src="https://github.com/user-attachments/assets/21e8857b-4f2c-43ba-9132-e8244d16fb47" />
+<img width="1915" height="921" alt="vs6" src="https://github.com/user-attachments/assets/785f81a9-ac91-4661-a613-227196250c18" />
+<img width="1922" height="923" alt="vs7" src="https://github.com/user-attachments/assets/043b6cf5-b64e-4002-b6fc-4bfeed5e4444" />
+<img width="1915" height="1017" alt="image" src="https://github.com/user-attachments/assets/dbbf725e-0cbf-41c4-8d71-237c54d1e671" />
+
 
 
 ---
