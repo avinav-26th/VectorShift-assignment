@@ -1,0 +1,227 @@
+/* frontend/src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+:root {
+  --bg-color: #15223f;
+  --node-bg: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --input-bg: #334155;
+  --primary-color: #6366f1;
+  --handle-bg: #6366f1;
+  --danger-color: #ef4444;
+  --success-color: #22c55e;
+  --minimap-mask: rgba(255, 255, 255, 0.1);
+  --controls-bg: #1e293b;
+  --controls-border: #334155;
+  --controls-icon: #f8fafc;
+}
+
+body.light-mode {
+  --bg-color: #ffffff;
+  --node-bg: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #cbd5e1;
+  --input-bg: #e2e8f0;
+  --primary-color: #4f46e5;
+  --handle-bg: #4f46e5;
+  --minimap-mask: rgba(0, 0, 0, 0.1);
+  --controls-bg: #ffffff;
+  --controls-border: #e2e8f0;
+  --controls-icon: #1e293b;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+  overflow: hidden; /* Prevent body scroll, let Canvas handle it */
+}
+
+/* Node Inputs */
+input, select, textarea {
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 6px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary-color);
+}
+
+/* React Flow Controls Overrides */
+.react-flow__controls {
+  background-color: var(--controls-bg) !important;
+  border: 1px solid var(--controls-border) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.react-flow__controls .react-flow__controls-button {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--controls-border) !important;
+  border-radius: 0;
+}
+
+.react-flow__controls .react-flow__controls-button:last-child {
+  border-bottom: none !important;
+}
+
+.react-flow__controls .react-flow__controls-button:hover {
+  background-color: var(--input-bg) !important;
+}
+
+/* Force SVG icons to take the theme color */
+.react-flow__controls .react-flow__controls-button svg {
+  fill: var(--controls-icon) !important;
+  stroke: var(--controls-icon) !important;
+}
+.react-flow__controls .react-flow__controls-button svg path {
+  fill: var(--controls-icon) !important;
+}
+
+/* React Flow MiniMap Overrides (Fixed) */
+.react-flow__minimap {
+  background-color: var(--controls-bg) !important;
+  border: 1px solid var(--controls-border);
+  border-radius: 8px;
+  overflow: hidden; /* Clips the square content */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure inner SVG doesn't paint a background over our rounded corners */
+.react-flow__minimap svg {
+  background-color: transparent !important;
+}
+
+.react-flow__minimap-mask {
+  fill: var(--minimap-mask) !important;
+}
+
+.react-flow__minimap-node {
+  fill: var(--input-bg) !important;
+  stroke: none;
+}
+
+/* Toastify Theming */
+.Toastify__toast {
+  background-color: var(--node-bg) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+}
+
+.Toastify__close-button {
+  color: var(--text-secondary) !important;
+  opacity: 0.7;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
+/* React Flow Edges */
+.react-flow__edge-path {
+  stroke: var(--text-secondary);
+  stroke-width: 2;
+  transition: stroke 0.3s;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: var(--primary-color);
+}
+
+/* Run Simulation Animation */
+@keyframes dashdraw {
+  from { stroke-dashoffset: 20; }
+  to { stroke-dashoffset: 0; }
+}
+
+.react-flow__edge-path.running-flow {
+  stroke: var(--success-color) !important;
+  stroke-dasharray: 5;
+  animation: dashdraw 0.5s linear infinite;
+}
+
+/* Button Edge (The X on the wire) */
+.edgebutton-foreignobject div {
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20px;
+}
+
+.edgebutton {
+  width: 20px;
+  height: 20px;
+  background: var(--node-bg);
+  border: 1px solid var(--danger-color);
+  color: var(--danger-color);
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+.edgebutton:hover {
+  background: var(--danger-color);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Handles (Connectors) */
+.react-flow__handle {
+  background: var(--handle-bg);
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--bg-color);
+  transition: all 0.2s;
+}
+
+.react-flow__handle:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.2);
+  cursor: crosshair;
+}
+
+/* Scrollbar Hiding Utility */
+.noscroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.noscroll::-webkit-scrollbar {
+  display: none;
+}
+
+.nodrag {
+  cursor: text;
+}
