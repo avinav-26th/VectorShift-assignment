@@ -5,7 +5,7 @@
 VectorShift Pipeline Demo is a drag-and-drop editor that allows users to design, validate, and simulate complex AI workflows. It mimics the behavior of production-grade tools like LangFlow or ComfyUI, offering a seamless experience from "Idea" to "Execution Simulation." It features a custom-built Breadth-First Search (BFS) execution engine, real-time variable detection, and robust state management.
 
 ---
-### [See Live Frontend](https://vector-shift-assignment-delta.vercel.app/) | [Walkthrough Demo](https://youtu.be/placeholder-link)
+### [See Live Frontend](https://vector-shift-assignment-delta.vercel.app/) | [Walkthrough Demo](https://drive.google.com/file/d/15YWeIMw2Oi10wlJ1O8yoLXpgyv6aofxo/view?usp=drivesdk)
 
 ---
 
